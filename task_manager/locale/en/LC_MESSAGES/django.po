@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-01 18:26+0400\n"
+"POT-Creation-Date: 2024-05-10 14:33+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,39 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: task_manager/templates/index.html:10
+
+#: templates/base.html:6 templates/navbar.html:4
+msgid "TaskManager"
+msgstr "Task Manager"
+
+#: templates/index.html:9
 msgid "HelloBy"
 msgstr "Hello by "
+
+#: templates/navbar.html:11
+msgid "Users"
+msgstr "Users"
+
+#: templates/navbar.html:18
+msgid "Sign In"
+msgstr ""
+
+#: templates/navbar.html:22
+msgid "Sign Up"
+msgstr ""
+
+#: templates/navbar.html:27
+msgid "Statuses"
+msgstr ""
+
+#: templates/navbar.html:30
+msgid "Labels"
+msgstr ""
+
+#: templates/navbar.html:33
+msgid "Tasks"
+msgstr ""
+
+#: templates/navbar.html:36
+msgid "Logout"
+msgstr ""
