@@ -15,14 +15,30 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TaskLabel',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('label', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='labels.label')),
-                ('task', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tasks.task')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID')
+                 ),
+                ('label', models.ForeignKey(
+                    on_delete=django.db.models.deletion.PROTECT,
+                    to='labels.label')
+                 ),
+                ('task', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='tasks.task')
+                 ),
             ],
         ),
         migrations.AddField(
             model_name='task',
             name='label',
-            field=models.ManyToManyField(blank=True, related_name='label', through='tasks.TaskLabel', to='labels.label'),
+            field=models.ManyToManyField(
+                blank=True,
+                related_name='label',
+                through='tasks.TaskLabel',
+                to='labels.label'
+            ),
         ),
     ]

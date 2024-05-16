@@ -13,6 +13,10 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='label',
             name='name',
-            field=models.CharField(max_length=150, unique=True, verbose_name='имя'),
+            field=models.CharField(
+                max_length=150,
+                unique=True,
+                verbose_name='имя'
+            ),
         ),
     ]

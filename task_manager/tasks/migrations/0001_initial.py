@@ -18,13 +18,26 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Task',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=150, unique=True)),
                 ('description', models.TextField(blank=True)),
                 ('creation_date', models.DateTimeField(auto_now_add=True)),
-                ('author', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='author', to=settings.AUTH_USER_MODEL)),
-                ('status', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='status', to='statuses.status')),
-                ('task_performer', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='task_performer', to=settings.AUTH_USER_MODEL)),
+                ('author', models.ForeignKey(
+                    on_delete=django.db.models.deletion.PROTECT,
+                    related_name='author',
+                    to=settings.AUTH_USER_MODEL)
+                 ),
+                ('status', models.ForeignKey(
+                    on_delete=django.db.models.deletion.PROTECT,
+                    related_name='status',
+                    to='statuses.status')
+                 ),
+                ('task_performer', models.ForeignKey(
+                    on_delete=django.db.models.deletion.PROTECT,
+                    related_name='task_performer',
+                    to=settings.AUTH_USER_MODEL)
+                 ),
             ],
         ),
     ]

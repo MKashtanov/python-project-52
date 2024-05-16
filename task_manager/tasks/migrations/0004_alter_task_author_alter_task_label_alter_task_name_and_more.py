@@ -18,26 +18,41 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='task',
             name='author',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='author', to=settings.AUTH_USER_MODEL, verbose_name='Автор'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name='author',
+                to=settings.AUTH_USER_MODEL,
+                verbose_name='Автор'),
         ),
         migrations.AlterField(
             model_name='task',
             name='label',
-            field=models.ManyToManyField(blank=True, related_name='label', through='tasks.TaskLabel', to='labels.label', verbose_name='Метки'),
+            field=models.ManyToManyField(
+                blank=True, related_name='label',
+                through='tasks.TaskLabel', to='labels.label',
+                verbose_name='Метки'),
         ),
         migrations.AlterField(
             model_name='task',
             name='name',
-            field=models.CharField(max_length=150, unique=True, verbose_name='имя'),
+            field=models.CharField(
+                max_length=150, unique=True, verbose_name='имя'),
         ),
         migrations.AlterField(
             model_name='task',
             name='status',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='status', to='statuses.status', verbose_name='Статус'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name='status', to='statuses.status',
+                verbose_name='Статус'),
         ),
         migrations.AlterField(
             model_name='task',
             name='task_performer',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='task_performer', to=settings.AUTH_USER_MODEL, verbose_name='Исполнитель'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name='task_performer',
+                to=settings.AUTH_USER_MODEL,
+                verbose_name='Исполнитель'),
         ),
     ]

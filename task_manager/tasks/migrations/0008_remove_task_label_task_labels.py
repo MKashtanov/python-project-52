@@ -18,6 +18,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='task',
             name='labels',
-            field=models.ManyToManyField(blank=True, related_name='labels', through='tasks.TaskLabel', to='labels.label', verbose_name='Метки'),
+            field=models.ManyToManyField(
+                blank=True,
+                related_name='labels',
+                through='tasks.TaskLabel',
+                to='labels.label',
+                verbose_name='Метки'),
         ),
     ]
