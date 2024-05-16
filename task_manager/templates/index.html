@@ -1,10 +1,15 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
 {% load i18n %}
 
-{% block title %}
-Index
-{% endblock %}
-
 {% block content %}
-<h1>{% trans 'HelloBy' %} {{ who }}!!!</h1>
+<div class="card mt-4">
+  <div class="card-body p-5 bg-light">
+    <div class="display-4">{% translate 'Task Manager' %}</div>
+    <p class="lead">{% translate 'Try a simple task manager' %}</p>
+    <hr>
+    <a class="btn btn-primary btn-lg" href="#">{% translate 'Get Started' %}</a>
+  </div>
+</div>
 {% endblock %}
