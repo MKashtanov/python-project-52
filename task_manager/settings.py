@@ -137,7 +137,7 @@ AUTH_PASSWORD_VALIDATORS = [
 if os.getenv('LANGUAGE'):
     LANGUAGE_CODE = os.getenv('LANGUAGE')
 else:
-    LANGUAGE_CODE = 'ru'
+    LANGUAGE_CODE = 'ru-ru'
 
 LOCALE_PATHS = [
     BASE_DIR / "task_manager" / "locale"
@@ -154,6 +154,7 @@ LANGUAGES = (
     ('ru', 'Russian'),
 )
 
+DEFAULT_LANGUAGE = 2
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
