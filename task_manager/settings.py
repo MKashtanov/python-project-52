@@ -150,11 +150,9 @@ USE_I18N = True
 USE_TZ = True
 
 LANGUAGES = (
-    ('en', 'English'),
     ('ru', 'Russian'),
+    ('en', 'English'),
 )
-
-DEFAULT_LANGUAGE = 2
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
