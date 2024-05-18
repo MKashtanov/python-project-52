@@ -134,10 +134,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-if os.getenv('LANGUAGE'):
-    LANGUAGE_CODE = os.getenv('LANGUAGE')
-else:
-    LANGUAGE_CODE = 'ru-ru'
+# if os.getenv('LANGUAGE'):
+#     LANGUAGE_CODE = os.getenv('LANGUAGE')
+# else:
+LANGUAGE_CODE = 'ru-Ru'
 
 LOCALE_PATHS = [
     BASE_DIR / "task_manager" / "locale"
