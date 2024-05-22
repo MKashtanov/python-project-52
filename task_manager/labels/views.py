@@ -21,7 +21,7 @@ class LabelListView(UserAuthRequiredMixin, ListView):
 class LabelCreateView(UserAuthRequiredMixin, SuccessMessageMixin, CreateView):
     model = Label
     form_class = LabelCreateForm
-    template_name = 'form.html'
+    template_name = 'lables/create.html'
 
     success_url = reverse_lazy('labels')
     login_url = reverse_lazy('login')
@@ -29,27 +29,17 @@ class LabelCreateView(UserAuthRequiredMixin, SuccessMessageMixin, CreateView):
     success_message = _('Label created successfully')
     permission_denied_message = _('You must to be log in')
 
-    extra_context = {
-        'header': _('Create label'),
-        'button': _('Create'),
-    }
-
 
 class LabelUpdateView(UserAuthRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Label
     form_class = LabelUpdateForm
-    template_name = 'form.html'
+    template_name = 'lables/update.html'
 
     success_url = reverse_lazy('labels')
     login_url = reverse_lazy('login')
 
     success_message = _('Label updated successfully')
     permission_denied_message = _('You must to be log in')
-
-    extra_context = {
-        'header': _('Update label'),
-        'button': _('Update'),
-    }
 
 
 class LabelDeleteView(UserAuthRequiredMixin, ObjectDeleteProtectionMixin,

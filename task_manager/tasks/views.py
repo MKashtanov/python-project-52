@@ -32,18 +32,13 @@ class TaskView(UserAuthRequiredMixin, DetailView):
 class TaskCreateView(UserAuthRequiredMixin, SuccessMessageMixin, CreateView):
     model = Task
     form_class = TaskCreateForm
-    template_name = 'form.html'
+    template_name = 'tasks/create.html'
 
     success_url = reverse_lazy('tasks')
     login_url = reverse_lazy('login')
 
     success_message = _('Task created successfully')
     permission_denied_message = _('You must to be log in')
-
-    extra_context = {
-        'header': _('Create task'),
-        'button': _('Create'),
-    }
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -53,18 +48,13 @@ class TaskCreateView(UserAuthRequiredMixin, SuccessMessageMixin, CreateView):
 class TaskUpdateView(UserAuthRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Task
     form_class = TaskUpdateForm
-    template_name = 'form.html'
+    template_name = 'tasks/update.html'
 
     success_url = reverse_lazy('tasks')
     login_url = reverse_lazy('login')
 
     success_message = _('Task updated successfully')
     permission_denied_message = _('You must to be log in')
-
-    extra_context = {
-        'header': _('Update task'),
-        'button': _('Update'),
-    }
 
 
 class TaskDeleteView(UserAuthRequiredMixin, SuccessMessageMixin,
