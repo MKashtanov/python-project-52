@@ -10,7 +10,16 @@
 ## Install  
 - Clone repo: `git clone https://github.com/MKashtanov/python-project-52.git`
 - Install dependencies: `make install`
-- Run development server: `make dev`  
+- Run development server: `make dev`
+## Deploy
+- Build Command: `./build.sh`
+- Start Command: `gunicorn task_manager.wsgi:application`
+## Uses environments
+- `DATABASE_URL` - database connection string. For example: postgresql://[user[:password]@][netloc][:port][/dbname]
+- `SECRET_KEY` - is used in Django for cryptographic signing
+- `RENDER_EXTERNAL_HOSTNAME` - specify a dynamic URL for your environment
+- `ROLLBAR_ACCESS_TOKEN` - enter the access token you copied from Rollbar
+
 ## Stack  
 ![Static Badge](https://img.shields.io/badge/Python-3.10-blue)  
 ![Static Badge](https://img.shields.io/badge/Django-4.2.5-green)  

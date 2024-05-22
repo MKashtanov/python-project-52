@@ -7,9 +7,6 @@
 <div class="container wrapper flex-grow-1">
     <h1 class="my-4">{% translate 'Status remove' %}</h1>
     <p>{% translate 'Are you sure to remove' %} {{ status.name }}?</p>
-    <form method="post">
-        {% csrf_token %}
-        <input class="btn btn-danger" type="submit" value="{% translate 'Yes, delete' %}">
-    </form>
+        {% include 'form_delete.html' %}
 </div>
 {% endblock %}

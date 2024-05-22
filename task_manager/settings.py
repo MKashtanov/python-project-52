@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    # 'django.contrib.staticfiles',
     'task_manager',
     'task_manager.users',
     'task_manager.statuses',
@@ -113,21 +112,12 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 AUTH_PASSWORD_VALIDATORS = [
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    # },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
         'OPTIONS': {
             'min_length': 3,
         }
     },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    # },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    # },
 ]
 
 
@@ -137,7 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # if os.getenv('LANGUAGE'):
 #     LANGUAGE_CODE = os.getenv('LANGUAGE')
 # else:
-LANGUAGE_CODE = 'ru-Ru'
+LANGUAGE_CODE = 'ru'
 
 LOCALE_PATHS = [
     BASE_DIR / "task_manager" / "locale"

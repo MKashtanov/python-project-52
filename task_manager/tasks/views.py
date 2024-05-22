@@ -4,7 +4,7 @@ from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 from django_filters.views import FilterView
 from django.utils.translation import gettext as _
 
-from ..mixins import UserAuthRequiredMixin, TaskAuthorPermissionMixin
+from task_manager.mixins import UserAuthRequiredMixin, TaskAuthorPermissionMixin
 from .models import Task
 from .filters import TaskFilter
 from .forms import TaskCreateForm, TaskUpdateForm

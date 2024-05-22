@@ -1,0 +1,6 @@
+{% load i18n %}
+
+<form method="post">
+    {% csrf_token %}
+    <input class="btn btn-danger" type="submit" value="{% translate 'Yes, delete' %}">
+</form>
