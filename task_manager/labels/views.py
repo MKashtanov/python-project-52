@@ -21,7 +21,7 @@ class LabelListView(UserAuthRequiredMixin, ListView):
 class LabelCreateView(UserAuthRequiredMixin, SuccessMessageMixin, CreateView):
     model = Label
     form_class = LabelCreateForm
-    template_name = 'lables/create.html'
+    template_name = 'labels/create.html'
 
     success_url = reverse_lazy('labels')
     login_url = reverse_lazy('login')
@@ -33,7 +33,7 @@ class LabelCreateView(UserAuthRequiredMixin, SuccessMessageMixin, CreateView):
 class LabelUpdateView(UserAuthRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Label
     form_class = LabelUpdateForm
-    template_name = 'lables/update.html'
+    template_name = 'labels/update.html'
 
     success_url = reverse_lazy('labels')
     login_url = reverse_lazy('login')
